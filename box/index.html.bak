@@ -49,13 +49,12 @@
     
     <ul id="ul"></ul>
   <center>
-    <h4>如果有更多好看好用的 可以私信</h4>
+    <h3><a href="https://download.kstore.space/download/4645/Tvbox/myks/img/%E5%85%AC%E4%BC%97%E5%8F%B7.png"target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;"rel="nofollow">如果有更多好看好用的 可以点击私信我</a></h3> 
+	<strong><br></strong>
+	
+	<h3><a href="https://yf2023.lanzoum.com/b058ockej" target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;"rel="nofollow">盒子下载传送门</a></h3>
   </center>
-  <center>
-    
-    <a href="https://yf2023.lanzoum.com/b058ockej" target="_blank" style="color: rgb(255, 0, 0); text-decoration-line: none;"rel="nofollow">盒子下载传送</a>
-    <br>
-  </center>
+
 </body>
 <script>
 function Toast(msg, duration) {
@@ -75,7 +74,6 @@ function Toast(msg, duration) {
 }
 const list = [
 
-{color:"#00FF00",url:"",name:"以下是多仓"},
 
     {
         "url": "https://yf1688.top/22",
@@ -113,15 +111,24 @@ const list = [
   
   {color:"#48c0a4",url:"https://cyuan.netlify.app/tvbox/store18.json",name:"18+多仓"},
   
-  {color:"#00FF00",url:"",name:"以下是单仓"},
+  {color:"#808000",url:"",name:"以下是单仓"},
 
     {
         "url": "http://饭太硬.ml/tv",
         "name": "🚀饭太硬线路",
         "color": "#91ad70"
     },
-	
-	    {
+    {
+        "url": "https://download.kstore.space/download/4645/Tvbox/myks/99.png",
+        "name": "🚀小鱼线路",
+        "color": "#91ad70"
+    },	
+    {
+        "url": "http://肥猫.live",
+        "name": "🚀肥猫线路",
+        "color": "#91ad70"
+    },	
+	{
         "url": "http://fan.xxooo.cf/tv",
         "name": "🚀饭太硬线路2",
         "color": "#91ad70"
@@ -129,11 +136,6 @@ const list = [
 	{
         "url": "http://fan.888484.xyz:88/tv",
         "name": "🚀饭太硬线路3",
-        "color": "#91ad70"
-    },
-    {
-        "url": "http://肥猫.live",
-        "name": "🚀肥猫线路",
         "color": "#91ad70"
     },
     {
