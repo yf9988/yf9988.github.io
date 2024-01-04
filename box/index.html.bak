@@ -120,17 +120,8 @@ const list = [
         "name": "🚀饭太硬线路",
         "color": "#91ad70"
     },
-    {
-        "url": "https://download.kstore.space/download/4645/Tvbox/myks/99.png",
-        "name": "🚀小鱼线路",
-        "color": "#91ad70"
-    },	
-    {
-        "url": "http://肥猫.live",
-        "name": "🚀肥猫线路",
-        "color": "#91ad70"
-    },	
-	{
+	
+	    {
         "url": "http://fan.xxooo.cf/tv",
         "name": "🚀饭太硬线路2",
         "color": "#91ad70"
@@ -138,6 +129,11 @@ const list = [
 	{
         "url": "http://fan.888484.xyz:88/tv",
         "name": "🚀饭太硬线路3",
+        "color": "#91ad70"
+    },
+    {
+        "url": "http://肥猫.live",
+        "name": "🚀肥猫线路",
         "color": "#91ad70"
     },
     {
