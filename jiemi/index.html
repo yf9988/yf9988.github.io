@@ -35,9 +35,11 @@
         <h1 class="text-center mb-5">TVBox在线接口一键解密</h1>
         <div class="input-group mb-3">    
 
-       <input type="text" class="form-control" id="url" value="" placeholder="更多有趣网页，请访问大聪明的主页" list="yyds"/>
+       <input type="text" class="form-control" id="url" value="" placeholder="没有源，点击下面‘TVBox按钮’去拿" list="yyds"/>
 	   
-	  <button onclick="document.getElementById('url').value=''">删除</button>
+	   <input type="button" value="X" style="width: 30px; height: 30px; border-radius:50%;border: none" onclick="document.getElementById('url').value=''" /> 
+	   
+	  <!-- <button onclick="document.getElementById('url').value=''">删除</button>  -->
 	  
         <datalist id="yyds">
 
