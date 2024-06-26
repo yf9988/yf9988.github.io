@@ -62,7 +62,7 @@ h1 {
         text-align: center;
         padding: 12px 20px;
         width: calc(25% - 20px);/*使按钮宽度适应3分之一减去间隔的宽度*/
-        min-height: 80px; /* 增加高度以适应图标 */
+        min-height: 50px; /* 增加高度以适应图标 */
         text-decoration: none;
         color: white;
 		font-size: 16px;
