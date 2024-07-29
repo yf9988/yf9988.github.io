@@ -25,7 +25,7 @@
   {
     "name": "818",
     "type": 0,
-    "url": "https://yf1688.top/tv/txt/818.txt",
+    "url": "https://a.yf1688.top/tv/txt/818.txt",
     "playerType": 1,
     "ua": "okhttp/3.15",
     "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
@@ -84,26 +84,7 @@
     "changeable": 1,
     "timeout": 20,
     "ext": "./js/采集之王.js?type=url&params=./json/采集精选.json$1"
-  },
-  {
-    "key": "php_madou",
-    "name": "🔞┃麻豆",
-    "type": 4,
-    "api": "https://demobe.serv00.net/madou.php",
-    "searchable": 1,
-    "quickSearch":0,
-    "filterable":0
-  },		  
-  {
-    "key": "hipy_js_草莓秒播[密]",
-    "name": "🔞┃草莓秒播[密]",
-    "type": 3,
-    "api": "./douban/drpy3.min.js",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 1,
-    "ext": "./js/草莓秒播[密].js"
-  },
+  }, 
   {
     "key": "hipy_js_29片库[密]",
     "name": "🔞┃29片库[密]",
