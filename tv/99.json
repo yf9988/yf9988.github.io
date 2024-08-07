@@ -78,7 +78,25 @@
       "searchable": 1,
       "changeable": 0,
       "ext": "./js/短剧网.js"
-    },  
+    }, 
+    {
+      "key": "4K剧院",
+      "name": "🏆┃4K┃剧院🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "changeable": 0,
+      "ext": "./js/4K剧院.js"
+    },
+    {
+      "key": "4KAV",
+      "name": "🏆┃4KAV┃影视🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "changeable": 0,
+      "ext": "./js/4KAV.js"
+    }, 
     {
       "key": "csp_LiteApple",
       "name": "🍎┃苹果┃影视💯",
@@ -89,18 +107,29 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 10
-    }, 
+    },  
     {
-      "key": "厂长资源",
-      "name": "🏭️┃厂长┃资源🌺",
+      "key": "文采",
+      "name": "🧃┃文采┃秒播💯",
       "type": 3,
-      "api": "./douban/drpy3.min.js",
+      "api": "csp_Jpys",
+      "jar": "./jar/fty.jar",		
+      "playerType": 2,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "timeout": 10		
+    },
+    {
+      "key": "桃子影视",
+      "name": "🍑┃桃子┃影视💯",
+      "type": 3,
+      "api": "csp_Taozi",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "timeout": 20,
-      "ext": "./js/厂长资源.js"
-    },
+      "timeout": 10
+    },   
     {
       "key": "南瓜",
       "name": "🎃┃南瓜┃App🌺",
@@ -161,6 +190,17 @@
       "timeout": 10
     }, 
     {
+      "key": "厂长资源",
+      "name": "🏭️┃厂长┃资源🌺",
+      "type": 3,
+      "api": "./douban/drpy3.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 20,
+      "ext": "./js/厂长资源.js"
+    },
+    {
       "key": "原创",
       "name": "✨┃原创┃不卡💯",
       "type": 3,
@@ -171,19 +211,7 @@
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 10
-    },
-    {
-      "key": "文采",
-      "name": "🧃┃文采┃秒播💯",
-      "type": 3,
-      "api": "csp_Jpys",
-      "jar": "./jar/fty.jar",		
-      "playerType": 2,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "timeout": 10		
-    },
+    },    
     {
       "key": "在线之家",
       "name": "🏡┃在线┃之家💯",
@@ -195,17 +223,7 @@
       "changeable": 1,
       "ext": "https://www.zxzjhd.com/",
       "timeout": 10		
-    },
-    {
-      "key": "桃子影视",
-      "name": "🍑┃桃子┃影视💯",
-      "type": 3,
-      "api": "csp_Taozi",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 10
-    },	
+    },    	
     {
       "key": "快看影视",
       "name": "👀┃快看┃影视💯",
@@ -479,7 +497,7 @@
       "ext": {
         "Cloud-drive":"tvfan/Cloud-drive.txt",
         "from": "4k|auto|fhd",
-        "siteUrl": "https://www.wogg.link/",
+        "siteUrl": "https://wogg.xxooo.cf/",
         "danMu": "关"
       }
     },	
@@ -679,11 +697,11 @@
 
 {"key":"csp_KungFu404","name":"👩🏻‍🍳┃阿里┃设置💯","type":3,"api":"csp_KungFu404","searchable":0,"filterable":0,"changeable":0,"jar":"./jar/aliyun.jar","ext":"http://127.0.0.1:9978/TVBox/tok.txt"},
 {"key":"米搜","name":"🔍┃米搜┃搜索📀","type":3,"api":"csp_MIPanSo","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"夸搜","name":"🔍┃夸搜┃搜索📀","type":3,"api":"csp_QuarkPanso","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"YiSo","name":"🔍┃易搜┃搜索📀","type":3,"api":"csp_YiSo","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"PanSou","name":"🔍┃盘搜┃搜索📀","type":3,"api":"csp_PanSou","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"UpYun","name":"🔍┃Up搜┃搜索📀","type":3,"api":"csp_UpYun","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"PanSearch","name":"🔍┃盘Se┃搜索📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘他","name":"🔍┃盘他┃U夸📀","type":3,"api":"csp_PanTa","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSearch","name":"🔍┃夸搜┃夸父📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"YiSo","name":"🔍┃易搜┃阿狸📀","type":3,"api":"csp_YiSo","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"PanSou","name":"🔍┃盘搜┃阿狸📀","type":3,"api":"csp_PanSou","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"盘Se","name":"🔍┃盘Se┃阿狸📀","type":3,"api":"csp_PanSearch","jar":"./jar/fty.jar","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"push_agent","name":"📲┃手机┃推送📀","type":3,"api":"csp_Push","jar":"./jar/fty.jar","searchable":0,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"cc","name":"🚀导航-https://yf1688.top","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"filterable":0},
 {"key":"AD","name":"🚦请勿相信任何广告","type":3,"api":"csp_XBPQ","searchable":0,"quickSearch":0,"filterable":0}
