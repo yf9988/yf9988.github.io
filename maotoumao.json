@@ -1,31 +1,31 @@
 {
     "plugins": [{
-        "name": "酷狗Music",
+        "name": "酷狗音乐",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷狗.js",
         "version": "0.2.0"
     },    
     {
-        "name": "QQMusic",
+        "name": "QQ音乐",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/qq.js",
         "version": "0.2.0"
     },
     {
-        "name": "网易云Music",
+        "name": "网易云音乐",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/网易云.js",
         "version": "0.2.0"
     },
     {
-        "name": "酷我Music",
+        "name": "酷我音乐",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷我.js",
         "version": "0.2.0"
     },
     {
-        "name": "咪咕Music",
+        "name": "咪咕音乐",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/咪咕.js",
         "version": "0.2.0"
     },    
     {
-        "name": "喜马拉雅",
+        "name": "喜马拉雅音乐",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/喜马拉雅.js",
         "version": "0.1.4"
     },
@@ -80,7 +80,7 @@
         "version": "0.0.2"
     },
     {
-        "name": "Navidrome（搭建）",
+        "name": "Navidrome(搭建)",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Navidrome.js",
         "version": "0.0.1"
     },
@@ -95,7 +95,7 @@
         "version": "0.0.1"
     },
     {
-        "name": "Youtube",
+        "name": "Youtube(搜)",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Youtube.js",
         "version": "0.0.1"
     },         

@@ -185,7 +185,7 @@ async function getMediaSource(musicItem, quality) {
     };
 }
 module.exports = {
-    platform: "Youtube搜索",
+    platform: "Youtube(搜)",
     author: '风言锋语88',
     version: "0.0.1",
     supportedSearchType: ["music"],
