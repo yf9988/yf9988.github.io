@@ -453,7 +453,7 @@ async function getMediaSource(musicItem, quality) {
     };
 }
 module.exports = {
-    platform: "小秋音乐",
+    platform: "qq音乐",
     author: '风言锋语88',
     version: "0.2.0",
     srcUrl: "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/qq.js",
