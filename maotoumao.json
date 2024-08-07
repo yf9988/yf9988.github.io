@@ -1,5 +1,10 @@
-   {
+{
     "plugins": [{
+        "name": "酷狗Music",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷狗.js",
+        "version": "0.2.0"
+    },    
+    {
         "name": "QQMusic",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/qq.js",
         "version": "0.2.0"
@@ -7,23 +12,18 @@
     {
         "name": "网易云Music",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/网易云.js",
-        "version": "0.0.4"
-    },
-    {
-        "name": "咪咕Music",
-        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/咪咕.js",
-        "version": "0.0.4"
-    },
-    {
-        "name": "酷狗Music",
-        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷狗.js",
-        "version": "0.0.4"
+        "version": "0.2.0"
     },
     {
         "name": "酷我Music",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷我.js",
-        "version": "0.0.4"
+        "version": "0.2.0"
     },
+    {
+        "name": "咪咕Music",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/咪咕.js",
+        "version": "0.2.0"
+    },    
     {
         "name": "喜马拉雅",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/喜马拉雅.js",
@@ -70,9 +70,19 @@
         "version": "0.0.1"
     },
     {
+        "name": "Bilibili",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Bilibili.js",
+        "version": "0.1.7"
+    },
+    {
         "name": "WebDAV",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/WebDAV.js",
         "version": "0.0.2"
+    },
+    {
+        "name": "Navidrome（搭建）",
+        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Navidrome.js",
+        "version": "0.0.1"
     },
     {
         "name": "音悦台(搜)",
@@ -88,17 +98,7 @@
         "name": "Youtube",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Youtube.js",
         "version": "0.0.1"
-    },
-    {
-        "name": "Navidrome（搭建）",
-        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Navidrome.js",
-        "version": "0.0.1"
-    },  
-    {
-        "name": "Bilibili",
-        "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/Bilibili.js",
-        "version": "0.1.7"
-    },
+    },         
     {
         "name": "歌词千寻(搜)",
         "url": "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/歌词千寻.js",

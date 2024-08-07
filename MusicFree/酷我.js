@@ -468,12 +468,15 @@ async function getMusicSheetInfo(sheet, page) {
 const qualityLevels = {
     low: "128k",
     standard: "320k",
-    high: "flac",
-    super: "flac24bit",
+    high: "320k",
+    super: "320k",
 };
 async function getMediaSource(musicItem, quality) {
     const res = (
-        await axios_1.default.get(`http://110.42.36.53:1314/url/kw/${musicItem.id}/${qualityLevels[quality]}`, {
+        await axios_1.default.get(`https://render.niuma666bet.buzz/url/kw/${musicItem.id}/${qualityLevels[quality]}`, {
+            headers: {
+                "X-Request-Key": "share-v2"
+            },
         })
     ).data;
     return {
@@ -502,7 +505,7 @@ async function getMusicInfo(musicItem) {
 module.exports = {
     platform: "酷我音乐",
     author: '风言锋语88',
-    version: "0.0.4",
+    version: "0.2.0",
     appVersion: ">0.1.0-alpha.0",
     srcUrl: "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/酷我.js",
     cacheControl: "no-cache",

@@ -1,34 +1,25 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = require("axios");
 const CryptoJs = require("crypto-js");
 const qs = require("qs");
 const bigInt = require("big-integer");
 const dayjs = require("dayjs");
 const cheerio = require("cheerio");
-
-function a() {
-    var d, e, b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-        c = "";
+function create_key() {
+    var d, e, b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", c = "";
     for (d = 0; 16 > d; d += 1)
         (e = Math.random() * b.length), (e = Math.floor(e)), (c += b.charAt(e));
     return c;
 }
-
-function b(a, b) {
-    var c = CryptoJs.enc.Utf8.parse(b),
-        d = CryptoJs.enc.Utf8.parse("0102030405060708"),
-        e = CryptoJs.enc.Utf8.parse(a),
-        f = CryptoJs.AES.encrypt(e, c, {
-            iv: d,
-            mode: CryptoJs.mode.CBC,
-        });
+function AES(a, b) {
+    var c = CryptoJs.enc.Utf8.parse(b), d = CryptoJs.enc.Utf8.parse("0102030405060708"), e = CryptoJs.enc.Utf8.parse(a), f = CryptoJs.AES.encrypt(e, c, {
+        iv: d,
+        mode: CryptoJs.mode.CBC,
+    });
     return f.toString();
 }
-
-function c(text) {
+function Rsa(text) {
     text = text.split("").reverse().join("");
     const d = "010001";
     const e = "00e0b509f6259df8642dbc35662901477df22677ec152b5ff68ace615bb7b725152b3ab17a876aea8a5aa76d2e417629ec4ee341f56135fccf695280104e0312ecbda92557c93870114af6c9d05c4f7f0c3685b7a46bee255932575cce10b424d813cfe4875d3e82047b97ddef52741d546b8e289dc6935b3ece0462db0a22b8e7";
@@ -44,29 +35,26 @@ function c(text) {
         .join("")
         .concat(res);
 }
-
 function getParamsAndEnc(text) {
-    const first = b(text, "0CoJUm6Qyw8W8jud");
-    const rand = a();
-    const params = b(first, rand);
-    const encSecKey = c(rand);
+    const first = AES(text, "0CoJUm6Qyw8W8jud");
+    const rand = create_key();
+    const params = AES(first, rand);
+    const encSecKey = Rsa(rand);
     return {
         params,
         encSecKey,
     };
 }
-
 function formatMusicItem(_) {
-    var _a, _b, _c, _d, _v;
+    var _a, _b, _c, _d;
     const album = _.al || _.album;
-    const isVip = ((_.fee === 0 || _.fee === 8) && (!_.privilege || ((_v = _.privilege) === null || _v === void 0 ? void 0 : _v.st) >= 0)) ? "0" : "1";
     return {
-        isVip,
         id: _.id,
         artwork: album === null || album === void 0 ? void 0 : album.picUrl,
         title: _.name,
         artist: (_.ar || _.artists)[0].name,
         album: album === null || album === void 0 ? void 0 : album.name,
+        url: `https://share.duanx.cn/url/wy/${_.id}/128k`,
         qualities: {
             low: {
                 size: (_a = (_.l || {})) === null || _a === void 0 ? void 0 : _a.size,
@@ -84,7 +72,6 @@ function formatMusicItem(_) {
         copyrightId: _ === null || _ === void 0 ? void 0 : _.copyrightId
     };
 }
-
 function formatAlbumItem(_) {
     return {
         id: _.id,
@@ -95,7 +82,6 @@ function formatAlbumItem(_) {
         date: dayjs.unix(_.publishTime / 1000).format("YYYY-MM-DD"),
     };
 }
-
 const pageSize = 30;
 async function searchBase(query, page, type) {
     const data = {
@@ -223,7 +209,8 @@ async function getArtistWorks(artistItem, page, type) {
             isEnd: true,
             data: res.hotSongs.map(formatMusicItem),
         };
-    } else if (type === "album") {
+    }
+    else if (type === "album") {
         const res = (await (0, axios_1.default)({
             method: "post",
             url: `https://music.163.com/weapi/artist/albums/${artistItem.id}?csrf_token=`,
@@ -238,9 +225,7 @@ async function getArtistWorks(artistItem, page, type) {
 }
 async function getTopListDetail(topListItem) {
     const musicList = await getSheetMusicById(topListItem.id);
-    return Object.assign(Object.assign({}, topListItem), {
-        musicList
-    });
+    return Object.assign(Object.assign({}, topListItem), { musicList });
 }
 async function getLyric(musicItem) {
     const headers = {
@@ -250,12 +235,7 @@ async function getLyric(musicItem) {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36",
         "Content-Type": "application/x-www-form-urlencoded",
     };
-    const data = {
-        id: musicItem.id,
-        lv: -1,
-        tv: -1,
-        csrf_token: ""
-    };
+    const data = { id: musicItem.id, lv: -1, tv: -1, csrf_token: "" };
     const pae = getParamsAndEnc(JSON.stringify(data));
     const paeData = qs.stringify(pae);
     const result = (await (0, axios_1.default)({
@@ -266,6 +246,24 @@ async function getLyric(musicItem) {
     })).data;
     return {
         rawLrc: result.lrc.lyric,
+    };
+}
+async function getMusicInfo(musicItem) {
+    const headers = {
+        Referer: "https://y.music.163.com/",
+        Origin: "https://y.music.163.com/",
+        authority: "music.163.com",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36",
+        "Content-Type": "application/x-www-form-urlencoded",
+    };
+    const data = { id: musicItem.id, ids: `[${musicItem.id}]` };
+    const result = (await axios_1.get('http://music.163.com/api/song/detail',
+        {
+            headers,
+            params: data
+        })).data;
+    return {
+        artwork: result.songs[0].album.picUrl,
     };
 }
 async function getAlbumInfo(albumItem) {
@@ -291,9 +289,7 @@ async function getAlbumInfo(albumItem) {
         data: paeData,
     })).data;
     return {
-        albumItem: {
-            description: res.album.description
-        },
+        albumItem: { description: res.album.description },
         musicList: (res.songs || [])
             .map(formatMusicItem),
     };
@@ -307,31 +303,18 @@ async function getValidMusicItems(trackIds) {
         "Content-Type": "application/x-www-form-urlencoded",
     };
     try {
-        const data = {
-            csrf_token: "",
-            ids: `[${trackIds.join(",")}]`,
-            level: "standard",
-            encodeType: "flac",
-        };
-        const pae = getParamsAndEnc(JSON.stringify(data));
-        const urlencoded = qs.stringify(pae);
-        const res = (await (0, axios_1.default)({
-            method: "post",
-            url: `https://music.163.com/weapi/song/enhance/player/url/v1?csrf_token=`,
-            headers,
-            data: urlencoded,
-        })).data;
-        const validTrackIds = res.data.filter((_) => _.url).map((_) => _.id);
-        const songDetails = (await axios_1.default.get(`https://music.163.com/api/song/detail/?id=${validTrackIds[0]}&ids=[${validTrackIds.join(",")}]`, {
-            headers
-        })).data;
-        const validMusicItems = songDetails.songs
-            .map(formatMusicItem);
+        // 获取歌曲详情数据
+        const res = (await axios_1.default.get(`https://music.163.com/api/song/detail/?ids=[${trackIds.join(",")}]`, { headers })).data;
+        // 直接格式化歌曲项，不检查 URL
+        const validMusicItems = res.songs.map(formatMusicItem);
         return validMusicItems;
-    } catch (e) {
+    }
+    catch (e) {
+        console.error(e);
         return [];
     }
 }
+
 async function getSheetMusicById(id) {
     const headers = {
         Referer: "https://y.music.163.com/",
@@ -376,13 +359,14 @@ async function getTopLists() {
             currentGroup = {};
             currentGroup.title = $(c).text();
             currentGroup.data = [];
-        } else if (c.tagName === "ul") {
+        }
+        else if (c.tagName === "ul") {
             let sections = $(c).children();
             currentGroup.data = sections
                 .map((index, element) => {
                     const ele = $(element);
                     const id = ele.attr("data-res-id");
-                    const coverImg = ele.find("img").attr("src");
+                    const coverImg = ele.find("img").attr("src").replace(/(\.jpg\?).*/, ".jpg?param=800y800");
                     const title = ele.find("p.name").text();
                     const description = ele.find("p.s-fc4").text();
                     return {
@@ -400,32 +384,24 @@ async function getTopLists() {
     }
     return groups;
 }
-
 const qualityLevels = {
     low: "128k",
     standard: "320k",
-    high: "flac",
-    super: "flac24bit",
+    high: "320k",
+    super: "320k",
 };
-
-// by ikun0014&ThomasYou
 async function getMediaSource(musicItem, quality) {
-    try {
-        const ikun = (await (0, axios_1.default)({
-            method: "GET",
-            url: `http://110.42.36.53:1314/url/wy/${musicItem.id}/${qualityLevels[quality]}`,
-            xsrfCookieName: "XSRF-TOKEN",
-            withCredentials: true,
-        })).data;
-        
-        return {
-            url: ikun.data,
-          };
-    } catch (err) {
-        return null;
-    }
+    const res = (
+        await axios_1.default.get(`https://render.niuma666bet.buzz/url/wy/${musicItem.id}/${qualityLevels[quality]}`, {
+            headers: {
+                "X-Request-Key": "share-v2"
+            },
+        })
+    ).data;
+    return {
+        url: res.url,
+    };
 }
-
 const headers = {
     authority: "music.163.com",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36",
@@ -533,24 +509,19 @@ async function getMusicSheetInfo(sheet, page) {
             _trackIds: trackIds,
         };
     }
-    return Object.assign({
-        isEnd: trackIds.length <= page * pageSize,
-        musicList: res
-    }, extra);
+    return Object.assign({ isEnd: trackIds.length <= page * pageSize, musicList: res }, extra);
 }
 module.exports = {
     platform: "网易云音乐",
     author: '风言锋语88',
-    version: "0.0.4",
+    version: "0.2.0",
     appVersion: ">0.1.0-alpha.0",
     srcUrl: "https://raw.gitmirror.com/yf9988/yf9988.github.io/main/MusicFree/网易云.json",
     cacheControl: "no-store",
     hints: {
         importMusicSheet: [
-            "网易云移动端：APP点击分享，然后复制链接",
-            "网易云H5/PC端：复制URL，或者直接输入歌单ID即可",
-            "默认歌单无法导入，先新建一个空白歌单复制过去再导入新歌单即可",
-            "导入时间和歌单大小有关，请耐心等待",
+            "网易云：APP点击分享，然后复制链接",
+            "默认歌单无法导入，先新建一个空白歌单复制过去再导入新歌单即可"
         ],
     },
     supportedSearchType: ["music", "album", "sheet", "artist", "lyric"],
@@ -572,6 +543,7 @@ module.exports = {
         }
     },
     getMediaSource,
+    getMusicInfo,
     getAlbumInfo,
     getLyric,
     getArtistWorks,
