@@ -31,10 +31,11 @@
             'https://support.dmeng.net/upgrade-your-browser.html?referrer=' +
             encodeURIComponent(window.location.href);
     </script>
-    <link rel="stylesheet" href="https://yf1688.top/static/music/yybfq.css" />
-  <script type="module" crossorigin src="/assets/index-65c698b4.js"></script>
-  <link rel="stylesheet" href="/assets/index-ba016917.css">
-<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+    <script type="module" crossorigin src="/assets/index-65c698b4.js"></script>
+    <link rel="stylesheet" href="/assets/index-ba016917.css">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script>
+</head>
 
 <body>
     <!-- 主体内容 -->
@@ -43,46 +44,7 @@
     <noscript>
         <div style="text-align: center">请开启 JavaScript</div>
     </noscript>
-    
-    <!-- 音乐播放器 -->
-    <audio id="bg-music" loop></audio>
-    <div class="music-player">
-        <div class="toggle-border" onclick="togglePlayer()"></div>        
-        <ul id="music-list3"></ul>
-        <div class="controls-container">
-            <div class="controls-row">
-                <button id="prev-btn" class="circle-btn">
-                    <div class="prev-icon"></div>
-                </button>
-                <button id="toggle-btn" class="circle-btn">
-                    <div class="play-icon"></div>
-                </button>
-                <button id="next-btn" class="circle-btn">
-                    <div class="next-icon"></div>
-                </button>
-                <button id="list-btn" class="circle-btn">
-                    <div class="list-icon">
-                        <div>
-                        </div> <!-- 这里的div元素不能遗漏 -->
-                    </div>
-                </button>
-            </div>
-            <div class="controls-row-secondary">
-                <button id="rewind-btn" class="circle-btn">
-                    <div class="rewind-icon">⏪</div>
-                </button>
-                <button class="circle-btn" disabled></button> <!-- 占位按钮 -->
-                <button id="fast-forward-btn" class="circle-btn">
-                    <div class="fast-forward-icon">⏩</div>
-                </button>
-                <button class="circle-btn" disabled></button> <!-- 占位按钮 -->
-            </div>
-            <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
-            <p class="fengyanfengyu">公众号：风言锋语88</p>
-        </div>
-    </div>
-    <div id="status-message"></div>
-    <script src='https://yf1688.top/static/music/yybfq.js'></script>
+    <script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/170450247055" key="170450247055" m="1"></script>
 
 </body>
 
