@@ -31,13 +31,10 @@
             'https://support.dmeng.net/upgrade-your-browser.html?referrer=' +
             encodeURIComponent(window.location.href);
     </script>
-    <!--播放音乐按钮样式 -->
     <link rel="stylesheet" href="https://yf1688.top/static/music/yybfq.css" />
-    <script type="module" crossorigin src="/assets/index-cb1f0640.js"></script>
-    <link rel="stylesheet" href="/assets/index-ba016917.css">
-    <link rel="manifest" href="/manifest.webmanifest">
-    <script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script>
-</head>
+  <script type="module" crossorigin src="/assets/index-65c698b4.js"></script>
+  <link rel="stylesheet" href="/assets/index-ba016917.css">
+<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
 
 <body>
     <!-- 主体内容 -->
@@ -46,19 +43,13 @@
     <noscript>
         <div style="text-align: center">请开启 JavaScript</div>
     </noscript>
-
-    <!--音乐🎶-->
-    <audio id="bg-music" loop></audio>
-
+    
     <!-- 音乐播放器 -->
+    <audio id="bg-music" loop></audio>
     <div class="music-player">
-        <!-- 隐藏时的左侧边框 -->
-        <div class="toggle-border" onclick="togglePlayer()"></div>
-        <!-- 音乐列表 -->
+        <div class="toggle-border" onclick="togglePlayer()"></div>        
         <ul id="music-list3"></ul>
-        <!-- 播放器内容 -->
         <div class="controls-container">
-            <!-- 第一排按钮 -->
             <div class="controls-row">
                 <button id="prev-btn" class="circle-btn">
                     <div class="prev-icon"></div>
@@ -76,7 +67,6 @@
                     </div>
                 </button>
             </div>
-            <!-- 新增的第二排按钮 -->
             <div class="controls-row-secondary">
                 <button id="rewind-btn" class="circle-btn">
                     <div class="rewind-icon">⏪</div>
@@ -87,16 +77,13 @@
                 </button>
                 <button class="circle-btn" disabled></button> <!-- 占位按钮 -->
             </div>
-            <!-- 音量控制滑块 -->
             <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
             <p class="fengyanfengyu">公众号：风言锋语88</p>
         </div>
     </div>
-
-    <!-- 状态消息 -->
     <div id="status-message"></div>
-    <!--完-->
-<script src='https://yf1688.top/static/music/yybfq.js'></script>
+    <script src='https://yf1688.top/static/music/yybfq.js'></script>
+
 </body>
 
 </html>
