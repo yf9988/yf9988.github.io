@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Home"/>
+<g id="Print"/>
+<g id="Mail"/>
+<g id="Camera"/>
+<g id="Video"/>
+<g id="Film"/>
+<g id="Message"/>
+<g id="Telephone"/>
+<g id="User"/>
+<g id="File"/>
+<g id="Folder"/>
+<g id="Map"/>
+<g id="Download"/>
+<g id="Upload"/>
+<g id="Video_Recorder"/>
+<g id="Schedule"/>
+<g id="Cart"/>
+<g id="Setting"/>
+<g id="Search"/>
+<g id="Pencils"/>
+<g id="Group"/>
+<g id="Record"/>
+<g id="Headphone"/>
+<g id="Music_Player"/>
+<g id="Sound_On"/>
+<g id="Sound_Off"/>
+<g id="Lock"/>
+<g id="Lock_open"/>
+<g id="Love"/>
+<g id="Favorite"/>
+<g id="Film_1_"/>
+<g id="Music">
+<path d="M31,2v25.1c0-1.2-0.8-2.2-2-2.9V7h-8V1h9C30.5,1,31,1.5,31,2z" fill="#FFA131"/>
+<g>
+<path d="M31,27.1c0,0.1,0,0.1,0,0.2c-0.2,2.1-2.7,3.7-6,3.7c-3.4,0-6-1.7-6-3.9c0-2.2,2.6-3.9,6-3.9    c1.5,0,3,0.4,4,1C30.2,25,31,26,31,27.1z" fill="#FFA131"/>
+</g>
+<g>
+<path d="M13,27.1c0,0.1,0,0.1,0,0.2c-0.2,2.1-2.7,3.7-6,3.7c-3.4,0-6-1.7-6-3.9c0-2.2,2.6-3.9,6-3.9    c1.5,0,3,0.4,4,1C12.2,25,13,26,13,27.1z" fill="#FFA131"/>
+</g>
+<path d="M30,1h-9h-9c-0.5,0-1,0.5-1,1v22.3c1.2,0.7,2,1.7,2,2.9V7h8h8v17.3c-1-0.6-2.5-1-4-1c-3.4,0-6,1.7-6,3.9   c0,2.2,2.6,3.9,6,3.9c3.3,0,5.8-1.6,6-3.7c0-0.1,0-0.1,0-0.2V2C31,1.5,30.5,1,30,1z" fill="#FFC10A"/>
+<g>
+<path d="M11,24.3c-1-0.6-2.5-1-4-1c-3.4,0-6,1.7-6,3.9C1,29.3,3.6,31,7,31c3.3,0,5.8-1.6,6-3.7c0-0.1,0-0.1,0-0.2    C13,26,12.2,25,11,24.3z" fill="#9C27B0"/>
+<path d="M29,24.3c-1-0.6-2.5-1-4-1c-3.4,0-6,1.7-6,3.9c0,2.2,2.6,3.9,6,3.9c3.3,0,5.8-1.6,6-3.7c0-0.1,0-0.1,0-0.2    C31,26,30.2,25,29,24.3z" fill="#9C27B0"/>
+</g>
+</g>
+<g id="Puzzle"/>
+<g id="Turn_Off"/>
+<g id="Book"/>
+<g id="Save"/>
+<g id="Reload"/>
+<g id="Trash"/>
+<g id="Tag"/>
+<g id="Link"/>
+<g id="Like"/>
+<g id="Bad"/>
+<g id="Gallery"/>
+<g id="Add"/>
+<g id="Close"/>
+<g id="Forward"/>
+<g id="Back"/>
+<g id="Buy"/>
+<g id="Mac"/>
+<g id="Laptop"/>
+</svg>
